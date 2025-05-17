@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Product list with cart</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="main">
+    <h1>Desserts</h1>
+    <div class="products">
+      <article class="wafflie">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="./assets/images/image-waffle-desktop.jpg">
+          <source media="(min-width: 768px)" srcset="./assets/images/image-waffle-tablet.jpg">
+          <source media="(min-width: 375px)" srcset="./assets/images/image-waffle-mobile.jpg">
+          <img src="./assets/images/image-waffle-thumbnail.jpg" alt="Waffle with Berries">
+        </picture>
+        <h2>Waffle</h2>
+        <p class="description">Waffle with Berries</p>
+        <p class="price">$6.50</p>
+        <button class="add-to-cart" data-name="Waffle with Berries" data-price="6.50">
+          <img src="assets\images\icon-add-to-cart.svg" alt="add-to-cart icon">
+          Add to Cart</button>
+      </article>
+      <article class="creme-brulee">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="./assets/images/image-creme-brulee-desktop.jpg">
+          <source media="(min-width: 768px)" srcset="./assets/images/image-creme-brulee-tablet.jpg">
+          <source media="(min-width: 375px)" srcset="./assets/images/image-creme-brulee-mobile.jpg">
+          <img src="./assets/images/image-creme-brulee-thumbnail.jpg" alt="Vanilla Bean Crème Brûlée">
+        </picture>
+        <h2>Crème Brûlée</h2>
+        <p class="description">Vanilla Bean Crème Brûlée</p>
+        <p class="price">$7.00</p>
+        <button class="add-to-cart" data-name="Vanilla Bean Crème Brûlée" data-price="7.00">
+          <img src="assets\images\icon-add-to-cart.svg" alt="add-to-cart icon">
+          Add to Cart
+        </button>
+      </article>
+      <article class="macaron">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="./assets/images/image-macaron-desktop.jpg">
+          <source media="(min-width: 768px)" srcset="./assets/images/image-macaron-tablet.jpg">
+          <source media="(min-width: 375px)" srcset="./assets/images/image-macaron-mobile.jpg">
+          <img src="./assets/images/image-macaron-thumbnail.jpg" alt="Macaron Mix of Five">
+        </picture>
+        <h2>Macaron</h2>
+        <p class="description">Macaron Mix of Five</p>
+        <p class="price">$8.00</p>
+        <button class="add-to-cart" data-name="Macaron Mix of Five" data-price="8.00">
+          <img src="assets\images\icon-add-to-cart.svg" alt="add-to-cart icon">
+          Add to Cart</button>
+      </article>
+      <article class="tiramisu">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="./assets/images/image-tiramisu-desktop.jpg">
+          <source media="(min-width: 768px)" srcset="./assets/images/image-tiramisu-tablet.jpg">
+          <source media="(min-width: 375px)" srcset="./assets/images/image-tiramisu-mobile.jpg">
+          <img src="./assets/images/image-tiramisu-thumbnail.jpg" alt="Classic Tiramisu">
+        </picture>
+        <h2>Tiramisu</h2>
+        <p class="description">Classic Tiramisu</p>
+        <p class="price">$5.50</p>
+        <button class="add-to-cart" data-name="Classic Tiramisu" data-price="5.50">
+          <img src="assets\images\icon-add-to-cart.svg" alt="add-to-cart icon">
+          Add to Cart</button>
+      </article>
+      <article class="baklava">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="./assets/images/image-baklava-desktop.jpg">
+          <source media="(min-width: 768px)" srcset="./assets/images/image-baklava-tablet.jpg">
+          <source media="(min-width: 375px)" srcset="./assets/images/image-baklava-mobile.jpg">
+          <img src="./assets/images/image-baklava-thumbnail.jpg" alt="Pistachio Baklava">
+        </picture>
+        <h2>Baklava</h2>
+        <p class="description">Pistachio Baklava</p>
+        <p class="price">$4.00</p>
+        <button class="add-to-cart" data-name="Pistachio Baklava" data-price="4.00">
+          <img src="assets\images\icon-add-to-cart.svg" alt="add-to-cart icon">
+          Add to Cart</button>
+      </article>
+      <article class="pie">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="./assets/images/image-meringue-desktop.jpg">
+          <source media="(min-width: 768px)" srcset="./assets/images/image-meringue-tablet.jpg">
+          <source media="(min-width: 375px)" srcset="./assets/images/image-meringue-mobile.jpg">
+          <img src="./assets/images/image-meringue-thumbnail.jpg" alt="Lemon Meringue Pie">
+        </picture>
+        <h2>Pie</h2>
+        <p class="description">Lemon Meringue Pie</p>
+        <p class="price">$5.00</p>
+        <button class="add-to-cart" data-name="Lemon Meringue Pie" data-price="5.00">
+          <img src="assets\images\icon-add-to-cart.svg" alt="add-to-cart icon">
+          Add to Cart</button>
+      </article>
+      <article class="cake">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="./assets/images/image-cake-desktop.jpg">
+          <source media="(min-width: 768px)" srcset="./assets/images/image-cake-tablet.jpg">
+          <source media="(min-width: 375px)" srcset="./assets/images/image-cake-mobile.jpg">
+          <img src="./assets/images/image-cake-thumbnail.jpg" alt="Red Velvet Cake">
+        </picture>
+        <h2>Cake</h2>
+        <p class="description">Red Velvet Cake</p>
+        <p class="price">$4.50</p>
+        <button class="add-to-cart" data-name="Red Velvet Cake" data-price="4.50">
+           <img src="assets\images\icon-add-to-cart.svg" alt="add-to-cart icon">
+          Add to Cart</button>
+      </article>
+      <article class="brownie">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="./assets/images/image-brownie-desktop.jpg">
+          <source media="(min-width: 768px)" srcset="./assets/images/image-brownie-tablet.jpg">
+          <source media="(min-width: 375px)" srcset="./assets/images/image-brownie-mobile.jpg">
+          <img src="./assets/images/image-brownie-thumbnail.jpg" alt="Salted Caramel Brownie">
+        </picture>
+        <h2>Brownie</h2>
+        <p class="description">Salted Caramel Brownie</p>
+        <p class="price">$4.50</p>
+        <button class="add-to-cart" data-name="Salted Caramel Brownie" data-price="4.50">
+          <img src="assets\images\icon-add-to-cart.svg" alt="add-to-cart icon">
+          Add to Cart</button>
+      </article>
+      <article class="panna-cotta">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="./assets/images/image-panna-cotta-desktop.jpg">
+          <source media="(min-width: 768px)" srcset="./assets/images/image-panna-cotta-tablet.jpg">
+          <source media="(min-width: 375px)" srcset="./assets/images/image-panna-cotta-mobile.jpg">
+          <img src="./assets/images/image-panna-cotta-thumbnail.jpg" alt="Vanilla Panna Cotta">
+        </picture>
+        <h2>Panna Cotta</h2>
+        <p class="description">Vanilla Panna Cotta</p>
+        <p class="price">$6.50</p>
+        <button class="add-to-cart" data-name="Vanilla Panna Cotta" data-price="6.50">
+          <img src="assets\images\icon-add-to-cart.svg" alt="add-to-cart icon">
+          Add to Cart</button>
+      </article>
+    </div>
+    <div class="usercart">
+      <div class="cart">
+        <img src="./assets/images/icon-cart.svg" alt="Cart Icon">
+        <span class="cart-quantity">0</span>
+      </div>
+      <div class="cart-dropdown">
+        <h2>Your Cart (<span class="cart-quantity">0</span>)</h2>
+        <p>Your added items will appear here</p>
+        <button class="checkout">Checkout</button>
+      </div>
+      <div class="cart-empty">
+        <p>Your cart is empty</p>
+        <button class="continue-shopping">Continue Shopping</button>
+      </div>
+      <div class="cart-full">
+        <p>Your cart is full</p>
+        <button class="checkout">Checkout</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="">Njuguna Harrison</a>.
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
